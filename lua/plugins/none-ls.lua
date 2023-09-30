@@ -4,13 +4,10 @@ return {
     opts = function(_, opts)
       local nls = require('null-ls')
       opts.debug = true
-      opts.sources = vim.list_extend(opts.sources, {
-      nls.builtins.formatting.stylua,
-        nls.builtins.formatting.ruff,
+
+      vim.list_extend(opts.sources, {
         nls.builtins.formatting.black.with({
-          extra_args = {
-            '--skip-string-normalization',
-          },
+          extra_args = { '--skip-string-normalization' },
         }),
       })
     end,
