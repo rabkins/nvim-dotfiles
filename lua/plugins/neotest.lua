@@ -1,10 +1,10 @@
 return {
   'nvim-neotest/neotest',
   optional = true,
-  dependecies = {
+  dependencies = {
     'nvim-neotest/neotest-python',
     'nvim-neotest/neotest-plenary',
-    'nvim-neotest/neotest-rust',
+    'rouge8/neotest-rust',
   },
   opts = {
     adapters = {
